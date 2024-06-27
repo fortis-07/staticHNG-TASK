@@ -1,0 +1,13 @@
+Launch Instance:
+Go to AWS EC2 console.
+Click on “Launch Instance”.
+Choose “Amazon Linux 2 AMI” (or any desired Linux distribution).
+Select an instance type (e.g., t2.micro free-tier).
+Create a new key pair or use an existing one to connect to your instance securely via SSH.
+Configure instance details (leave defaults or adjust as needed).
+Add storage (default is usually sufficient).
+Create a new security group.
+Add a rule to allow inbound traffic on port 80 (HTTP) from your IP address to the security group.
+Review and launch the instance.
+SSH into the Instance: Using the command prompt terminal on your local machine to connect to the instance using SSH. Replace your_key.pem with the actual path to your private key and ec2-user with your instance's username (this is typical for Amazon Linux):
+ssh -i /path/to/your_key.pem ec2-user@your_ec2_public_ip
