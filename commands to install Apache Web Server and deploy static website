@@ -1,0 +1,17 @@
+Install Apache Web Server: Once connected to your EC2 instance via SSH, run the following commands to install Apache, start it, enable it to start on boot, and check its status:
+sudo yum update -y  # Update package index
+sudo yum install httpd -y  # Install Apache
+sudo systemctl start httpd  # Start Apache
+sudo systemctl enable httpd  # Enable Apache to start on boot
+sudo systemctl status httpd  # Check Apache status
+Create and Edit index.html: Navigate to the Apache web root directory (/var/www/html/) and create/edit index.html file with your website content:
+
+cd /var/www/html/
+sudo vim index.html
+
+Paste your HTML content.
+{See index.html}
+Save and exit Vim (:wq).
+Access Your Website: Use your EC2 instance’s public IP address to access your static website in a web browser:
+http://your_ec2_public_ip/
+By following these steps, you should have your static website deployed on an AWS EC2 instance using Apache successfully.
