@@ -1,0 +1,5 @@
+sudo yum update -y  # Update package index
+sudo yum install httpd -y  # Install Apache
+sudo systemctl start httpd  # Start Apache
+sudo systemctl enable httpd  # Enable Apache to start on boot
+sudo systemctl status httpd  # Check Apache status
